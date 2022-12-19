@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Data Management Page</title>
+    <link rel="stylesheet" href="employee.css">
+</head>
+<body style="background-color: skyblue">
+	<CENTER><h2>Employee Management</h2></CENTER>
+    <!--Table-->
+    <table>
+        
+        <tr>
+            <td>
+                <!--Form-->
+                <form onsubmit="event.preventDefault();onFormSubmit();" autocomplete="off">
+                	<h3>Enter Employee Details</h3>
+                  <!--div-1-->
+                    <div>
+                        <label>Employee ID</label>
+                        <!--Validation Error-->
+                        <label class="validation-error hide" id="eidvalidationError">This field is required</label>
+                        <!--Input User Name-->
+                        <input type="text" name="eid" id="eid" placeholder="Enter the Employee ID">
+                    </div>
+                    <!--div-2-->
+                    <div>
+                        <label>Employee Name</label>
+                        <!--Validation Error-->
+                        <label class="validation-error hide" id="enamevalidationError">This field is required</label>
+                        <!--Input User Name-->
+                        <input type="text" name="ename" id="ename" placeholder="Enter the Employee Name">
+                    </div>
+                    <!--div-3-->
+                    <div>
+                        <label>Employee Email</label>
+                        <!--Validation Error-->
+                        <label class="validation-error hide" id="eemailvalidationError">This field is required</label>
+                        <!--Input User Name-->
+                        <input type="email" name="eemail" id="eemail" placeholder="Enter the Employee Email">
+                    </div>
+                    <!--div-4-->
+                    <div>
+                        <label>Employee Age</label>
+                        <!--Validation Error-->
+                        <label class="validation-error hide" id="agevalidationError">This field is required</label>
+                        <!--Input Age-->
+                        <input type="number" name="age" id="age" placeholder="Enter the Employee Age">
+                    </div>
+                    <!--div-5-->
+                    <div>
+                        <label>Employee Designation</label>
+                        <!--Validation Error-->
+                        <label class="validation-error hide" id="erolevalidationError">This field is required</label>
+                        <!--Input Age-->
+                        <input type="text" name="erole" id="erole" placeholder="Enter the Employee's Designation">
+                    </div>
+                    <!--div-6-->
+                    <div class="form-action-buttons">
+                        <!--Input Button-->
+                        <input type="submit" value="Submit">
+                    </div>
+                </form>
+            </td>
+                
+                <td>
+                    <table class="list" id="emplist" style="background-color: #C2976D;">
+                        <!--Table Head-->
+                        <thead>
+                            
+                            <tr>
+                                <th>Employee ID</th>
+                                <th>Employee Name</th>
+                                <th>Employee Email</th>
+                                <th>Employee Age</th>
+                                <th>Employee Role</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <!--Table Body-->
+                        <tbody>
+                        </tbody>
+                    </table>
+                </td>
+            </tr>
+        </table>
+<script src="employee.js"></script>
+</body>
+</html>
